@@ -31,6 +31,6 @@ entries:
         - https://bitbucket.org/atlassian-docker/docker-atlassian-jira/
       type: application
       urls:
-        - https://github.com/Truong35/atlassian-helm/tree/main/charts
+        - https://github.com/Truong35/atlassian-helm/blob/main/charts/jira-1.15.3.tgz
       version: 1.15.3
 generated: "2023-09-18T11:39:29.164201+02:00"
