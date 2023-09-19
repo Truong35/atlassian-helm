@@ -112,7 +112,7 @@ database:
   # - 'jdbc:oracle:thin:@<dbhost>:1521:<SID>'
   # https://atlassian.github.io/data-center-helm-charts/userguide/CONFIGURATION/#databaseurl
   #
-  url: jdbc:postgresql://127.0.0.1:5432/mypostgresdb-postgresql-0
+  url: jdbc:postgresql://mypostgresdb-postgresql:5432/mypostgresdb-postgresql-0
 
   # -- The Java class name of the JDBC driver to be used. If not specified, then it will
   # need to be provided via the browser during manual configuration post deployment.
