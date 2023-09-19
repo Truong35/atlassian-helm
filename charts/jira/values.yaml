@@ -112,7 +112,7 @@ database:
   # - 'jdbc:oracle:thin:@<dbhost>:1521:<SID>'
   # https://atlassian.github.io/data-center-helm-charts/userguide/CONFIGURATION/#databaseurl
   #
-  url: jdbc:postgresql://10.244.0.33:5432/mypostgresdb-postgresql-client
+  url: jdbc:postgresql://127.0.0.1:5432/mypostgresdb-postgresql-0
 
   # -- The Java class name of the JDBC driver to be used. If not specified, then it will
   # need to be provided via the browser during manual configuration post deployment.
@@ -175,12 +175,12 @@ volumes:
       # -- If 'true', then a 'PersistentVolume' and 'PersistentVolumeClaim' will be dynamically
       # created for each pod based on the 'StorageClassName' supplied below.
       #
-      create: false
+      create: true
 
       # -- Specify the name of the 'StorageClass' that should be used for the local-home
       # volume claim.
       #
-      storageClassName:
+      storageClassName: "standard"
 
       # -- Specifies the standard K8s resource requests and/or limits for the local-home
       # volume claims.
@@ -904,9 +904,9 @@ fluentd:
   # -- Custom fluent.conf file
   #
   fluentdCustomConfig: { }
-    # fluent.conf: |
-    # <source>
-    #   @type tail
+  # fluent.conf: |
+  # <source>
+  #   @type tail
   #   <parse>
   #   @type multiline
   #   format_firstline /\d{4}-\d{1,2}-\d{1,2}/
